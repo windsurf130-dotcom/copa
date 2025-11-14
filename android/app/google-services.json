@@ -14,11 +14,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "491950036407-p6qrnm58egnldc11od3fl3a84d4gk7ke.apps.googleusercontent.com",
+          "client_id": "491950036407-8f8in4b6ndiho251oc0mf3bdcogfs3ae.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.tochegando.motoboy",
-            "certificate_hash": "62a27162f16ce01580fb34570e34bdf9602212ad"
+            "certificate_hash": "0a09748d27c794d9c47949ac4984f734f42b11e6"
           }
         },
         {
