@@ -4239,7 +4239,8 @@ class PaymentConfirmationDialogsState
 
             // Title
             Text(
-              widget.text? ?? "Confirm Payment",
+              widget.text
+              ?? "Confirm Payment",
               textAlign: TextAlign.center,
               style: heading3Grey1(context),
             ),
@@ -4308,7 +4309,7 @@ class PaymentConfirmationDialogsState
                           ],
                         ),
                         child: Text(
-                          widget.secondButtontext? ?? "Confirm",
+                          widget.secondButtontext ?? "Confirm",
                           style: heading3Grey1(context),
                         ),
                       ),
