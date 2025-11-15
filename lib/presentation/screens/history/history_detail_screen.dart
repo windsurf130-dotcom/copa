@@ -302,8 +302,8 @@ class _HistoryDetailScreenState extends State<HistoryDetailScreen> {
             child: Row(
               children: [
                 Text(
-                  rideData.token? ??
-                      "N/A",
+                  rideData.token ?? "N/A",
+                  
                   style: headingBlackBold(context).copyWith(fontSize: 18),
                   semanticsLabel:
                       "${"Código da viagem"}: ${rideData.token ?? "N/A"}",
