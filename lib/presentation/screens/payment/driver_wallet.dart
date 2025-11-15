@@ -318,7 +318,7 @@ class _DriverWalletScreenState extends State<DriverWalletScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                          walletTransactionDetail.type? ??
+                          walletTransactionDetail.type ??
                               "",
                           style: heading3Grey1(context)),
                       const SizedBox(height: 0),
