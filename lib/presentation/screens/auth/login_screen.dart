@@ -119,7 +119,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   const SizedBox(
                                     height: 25,
                                   ),
-                                  Text("Entrar".translate(context),
+                                  Text("Entrar",
                                       style: heading1(context)),
                                   const SizedBox(
                                     height: 15,
@@ -148,7 +148,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                                 dialCode: "+${number.dialCode}",
                                                 countryCode: number.code);
                                       },
-                                      hintText: "Telefone".translate(context),
+                                      hintText: "Telefone",
                                       onChanged: (value) {
                                         return null;
                                       },
@@ -156,14 +156,14 @@ class _LoginScreenState extends State<LoginScreen> {
                                         if (phoneNumber == null ||
                                             phoneNumber.number.isEmpty) {
                                           return "Por favor, insira seu número de telefone"
-                                              .translate(context);
+                                              ;
                                         }
                                         int expectedLength = phoneLengths[
                                                 phoneNumber.countryISOCode] ??
                                             10;
                                         if (phoneNumber.number.length !=
                                             expectedLength) {
-                                          return "${'O número de telefone deve ter'.translate(context)} $expectedLength ${'dígitos'.translate(context)}";
+                                          return "${'O número de telefone deve ter'} $expectedLength ${'dígitos'}";
                                         }
                                         return null;
                                       },
@@ -179,7 +179,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                               .text.isEmpty) {
                                             showErrorToastMessage(
                                                 "por favor, insira o número de telefone"
-                                                    .translate(context));
+                                                    );
                                             return;
                                           }
                                           context.read<AuthLoginCubit>().login(
@@ -201,7 +201,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                         clearData(context);
                                       },
                                       textColor: blackColor,
-                                      text: "Entrar".translate(context),
+                                      text: "Entrar",
                                       backgroundColor: themeColor),
                                   const SizedBox(
                                     height: 40,
@@ -210,7 +210,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
-                                        "Não tem uma conta?".translate(context),
+                                        "Não tem uma conta?",
                                         style: regular3(context)
                                             .copyWith(color: notifires.getGrey2whiteColor),
                                       ),
@@ -223,7 +223,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                                   builder: (context) => const SignUp()));
                                         },
                                         child: Text(
-                                          "Cadastre-se".translate(context),
+                                          "Cadastre-se",
                                           style: heading1(context).copyWith(
                                             color: blackColor,
                                             fontSize: 16,

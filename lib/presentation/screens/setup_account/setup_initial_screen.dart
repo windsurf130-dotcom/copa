@@ -123,11 +123,11 @@ class _SetupInitialScreenState extends State<SetupInitialScreen> {
 
   bool _validateProfileStep() {
     if (loginModel?.data?.gender == null || loginModel!.data!.gender!.isEmpty) {
-      showErrorToastMessage("Please select gender".translate(context));
+      showErrorToastMessage("Please select gender");
       return false;
     }
     if (loginModel?.data?.firstName == null || loginModel!.data!.firstName!.isEmpty) {
-      showErrorToastMessage("Please select Name".translate(context));
+      showErrorToastMessage("Please select Name");
       return false;
     }
     return true;
@@ -137,39 +137,39 @@ class _SetupInitialScreenState extends State<SetupInitialScreen> {
   bool _validateVehicleStep() {
     final vehicleFormState = context.read<VehicleFormCubit>().state;
     if (vehicleFormState.vehicleTypeId.isEmpty) {
-      showErrorToastMessage("Select the vehicle type".translate(context));
+      showErrorToastMessage("Select the vehicle type");
       return false;
     }
     if (vehicleFormState.vehicleMake.isEmpty) {
-      showErrorToastMessage("Select the Brand type".translate(context));
+      showErrorToastMessage("Select the Brand type");
       return false;
     }
     if (context.read<VehicleFormCubit>().textEditingVehicleModelController.text.isEmpty) {
-      showErrorToastMessage("Select the Model type".translate(context));
+      showErrorToastMessage("Select the Model type");
       return false;
     }
     if (context.read<VehicleFormCubit>().textEditingVehicleNumberController.text.isEmpty) {
-      showErrorToastMessage("Enter the vehicle registration number".translate(context));
+      showErrorToastMessage("Enter the vehicle registration number");
       return false;
     }
     if (context.read<VehicleFormCubit>().textEditingVehicleColorController.text.isEmpty) {
-      showErrorToastMessage("Enter the vehicle color".translate(context));
+      showErrorToastMessage("Enter the vehicle color");
       return false;
     }
     if (vehicleFormState.vehicleYear.isEmpty) {
-      showErrorToastMessage("Enter the vehicle Year".translate(context));
+      showErrorToastMessage("Enter the vehicle Year");
       return false;
     }
     if (vehicleFormState.vehicleBase64Image.isEmpty && box.get("itemTypeId") == false) {
-      showErrorToastMessage("Select the vehicle Image".translate(context));
+      showErrorToastMessage("Select the vehicle Image");
       return false;
     }
     if (vehicleFormState.vehicleDocBase64Image.isEmpty && box.get("itemTypeId") == false) {
-      showErrorToastMessage("Select the vehicle Document Image".translate(context));
+      showErrorToastMessage("Select the vehicle Document Image");
       return false;
     }
     if (vehicleFormState.vehicleLicenceBase64Image.isEmpty && box.get("itemTypeId") == false) {
-      showErrorToastMessage("Select the vehicle License Image".translate(context));
+      showErrorToastMessage("Select the vehicle License Image");
       return false;
     }
     return true;
@@ -275,10 +275,10 @@ class _SetupInitialScreenState extends State<SetupInitialScreen> {
   void _showLogoutBottomSheet() {
     showDynamicBottomSheets(
       context,
-      title: "Logout".translate(context),
-      description: "Are you sure you want to logout?".translate(context),
-      firstButtontxt: "Cancel".translate(context),
-      secondButtontxt: "Yes".translate(context),
+      title: "Logout",
+      description: "Are you sure you want to logout?",
+      firstButtontxt: "Cancel",
+      secondButtontxt: "Yes",
       onpressed: () => Navigator.pop(context),
       onpressed1: () async {
         token = "";
@@ -370,14 +370,14 @@ class _SetupInitialScreenState extends State<SetupInitialScreen> {
                   children: [
                     const SizedBox(height: 20),
                     Text(
-                      "Required Information".translate(context),
+                      "Required Information",
                       style: headingBlack(context).copyWith(fontSize: 20),
                     ),
                     const SizedBox(height: 30),
-                    Text("Welcome Driver".translate(context), style: headingBlack(context)),
+                    Text("Welcome Driver", style: headingBlack(context)),
                     const SizedBox(height: 5),
                     Text(
-                      "Follow these steps".translate(context),
+                      "Follow these steps",
                       style: headingBlack(context).copyWith(fontSize: 14),
                     ),
                     EasyStepper(
@@ -403,7 +403,7 @@ class _SetupInitialScreenState extends State<SetupInitialScreen> {
                         stepWidgets.length,
                             (index) => _buildStep(
                           step: index,
-                          title: stepTitles[index].translate(context),
+                          title: stepTitles[index],
                         ),
                       ),
                       onStepReached: _goToStep,
@@ -416,8 +416,7 @@ class _SetupInitialScreenState extends State<SetupInitialScreen> {
                     CustomsButtons(
                       textColor: blackColor,
                       text: activeStep == stepWidgets.length - 1
-                          ? "Final".translate(context)
-                          : "Next".translate(context),
+                          ? "Final"                          : "Next",
                       backgroundColor: themeColor,
                       onPressed: _nextStep,
                     ),

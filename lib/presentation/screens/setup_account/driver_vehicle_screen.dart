@@ -169,7 +169,7 @@ class _DriverVehicleScreenState extends State<DriverVehicleScreen> {
 
 
               },
-              hintText: "Vehicle Type".translate(context),
+              hintText: "Vehicle Type",
               checkmarkColor: acentColor,
               selectedEditInitialValue:
                   context.read<VehicleFormCubit>().state.vehicleTypeId,
@@ -210,7 +210,7 @@ class _DriverVehicleScreenState extends State<DriverVehicleScreen> {
                       .read<VehicleFormCubit>()
                       .updateVehicleMake(value.toString());
                 },
-                hintText: "Vehicle Make".translate(context),
+                hintText: "Vehicle Make",
                 checkmarkColor: acentColor,
               ),
             );
@@ -225,7 +225,7 @@ class _DriverVehicleScreenState extends State<DriverVehicleScreen> {
                   TextFieldAdvance(
                       cumpulsoryIcon: true,
                       textStyle: regular2(context),
-                      txt: "Vehicle Model".translate(context),
+                      txt: "Vehicle Model",
                       hintStyle: regular2(context),
                       inputFormatters: [
                         UpperCaseTextFormatter(), // 👈 Add this
@@ -245,7 +245,7 @@ class _DriverVehicleScreenState extends State<DriverVehicleScreen> {
                   TextFieldAdvance(
                       cumpulsoryIcon: true,
                       textStyle: regular2(context),
-                      txt: "Vehicle Number".translate(context),
+                      txt: "Vehicle Number",
                       hintStyle: regular2(context),
                       textEditingControllerCommon:
                           vehicleCubit.textEditingVehicleNumberController,
@@ -265,7 +265,7 @@ class _DriverVehicleScreenState extends State<DriverVehicleScreen> {
                   TextFieldAdvance(
                       cumpulsoryIcon: true,
                       textStyle: regular2(context),
-                      txt: "Vehicle Color".translate(context),
+                      txt: "Vehicle Color",
                       hintStyle: regular2(context),
                       textEditingControllerCommon:
                           vehicleCubit.textEditingVehicleColorController,
@@ -288,7 +288,7 @@ class _DriverVehicleScreenState extends State<DriverVehicleScreen> {
                         vehicleCubit.state.vehicleYear.isEmpty
                             ? null
                             : vehicleCubit.state.vehicleYear,
-                    hintText: "Vehicle Year".translate(context),
+                    hintText: "Vehicle Year",
                     checkmarkColor: acentColor,
                   ),
                 ],
@@ -306,9 +306,9 @@ class _DriverVehicleScreenState extends State<DriverVehicleScreen> {
                     backgroundColor: Colors.transparent,
                     builder: (context) => CustomBottomSheetVechicle(
                       SourceType: "Document",
-                      title: "Upload Vehicle Document".translate(context),
+                      title: "Upload Vehicle Document",
                       descrption:
-                          "Securely Upload Your Document".translate(context),
+                          "Securely Upload Your Document",
                       imageUrl: context.read<SetDocImage>().state,
                       onTap: () {
                         final vehicleFormState =
@@ -394,7 +394,7 @@ class _DriverVehicleScreenState extends State<DriverVehicleScreen> {
                             const SizedBox(width: 10),
                             RichText(
                                 text: TextSpan(
-                                    text: "Vehicle Document".translate(context),
+                                    text: "Vehicle Document",
                                     style: regular2(context),
                                     children: [
                                   TextSpan(
@@ -453,9 +453,9 @@ class _DriverVehicleScreenState extends State<DriverVehicleScreen> {
                       SourceType: "licence",
                       imageUrl: context.read<SetInsuranceImage>().state,
                       title:
-                          "Upload Vehicle license details".translate(context),
+                          "Upload Vehicle license details",
                       descrption: "Securely Upload Your license details "
-                          .translate(context),
+                          ,
                       onTap: () {
                         final vehicleFormState =
                             context.read<VehicleFormCubit>().state;
@@ -543,7 +543,7 @@ class _DriverVehicleScreenState extends State<DriverVehicleScreen> {
                             RichText(
                                 text: TextSpan(
                                     text: "license, insurance, vehicle details"
-                                        .translate(context),
+                                        ,
                                     style: regular2(context),
                                     children: [
                                   TextSpan(
@@ -604,9 +604,9 @@ class _DriverVehicleScreenState extends State<DriverVehicleScreen> {
                       SourceType: "VehicleImg",
                       imageUrl: context.read<SetVehicleImage>().state,
                       title: "Securely upload your vehicle images"
-                          .translate(context),
+                          ,
                       descrption: "Please add an external photo of your vehicle"
-                          .translate(context),
+                          ,
                       onTap: () {
                         final vehicleFormState =
                             context.read<VehicleFormCubit>().state;
@@ -692,7 +692,7 @@ class _DriverVehicleScreenState extends State<DriverVehicleScreen> {
                               const SizedBox(width: 10),
                               RichText(
                                   text: TextSpan(
-                                      text: "Vehicle Image ".translate(context),
+                                      text: "Vehicle Image ",
                                       style: regular2(context),
                                       children: [
                                     TextSpan(

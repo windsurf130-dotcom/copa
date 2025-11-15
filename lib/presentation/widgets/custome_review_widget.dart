@@ -102,7 +102,7 @@ class _CustomReviewWidgetState extends State<CustomReviewWidget> {
                               border: Border.all(width: 1, color: blackColor),
                               borderRadius: BorderRadius.circular(10)),
                           alignment: Alignment.center,
-                          child: Text("Skip".translate(context))),
+                          child: Text("Skip")),
                     ),
                   ],
                 ),
@@ -141,7 +141,7 @@ class _CustomReviewWidgetState extends State<CustomReviewWidget> {
                     ],
                   ),
                   const SizedBox(height: 15),
-                  Text("How was the rider?".translate(context),
+                  Text("How was the rider?",
                       style: regular2(context).copyWith(
                         fontSize: 16,
                       )),
@@ -175,7 +175,7 @@ class _CustomReviewWidgetState extends State<CustomReviewWidget> {
                     maxlines: 5,
                     backgroundColor: grey6,
 
-                    txt: "Add a comment for the rider ...".translate(context),
+                    txt: "Add a comment for the rider ...",
                     textEditingControllerCommon: textEditingReviewController,
                     inputType: TextInputType.text,
                     textInputAction: TextInputAction.done,

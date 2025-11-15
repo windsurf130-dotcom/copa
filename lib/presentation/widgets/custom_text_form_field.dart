@@ -243,7 +243,7 @@ class _IntelPhoneFieldRefState extends State<IntelPhoneFieldRefs> {
           regular2(context).copyWith(color: notifires.getGrey3whiteColor),
           searchFieldPadding: const EdgeInsets.all(10),
           searchFieldInputDecoration: InputDecoration(
-              hintText: "Search Country".translate(context),
+              hintText: "Search Country",
               hintStyle: regular3(context).copyWith(color: grey2),
               contentPadding: const EdgeInsets.only(left: 10, right: 10),
               border: OutlineInputBorder(

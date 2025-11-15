@@ -41,7 +41,7 @@ class _SettingScreenState extends State<SettingScreen> {
               onBackButtonPressed: () {
                 Navigator.pop(context);
               },
-              title: 'Configurações'.translate(context),
+              title: 'Configurações',
               backgroundColor: notifires.getbgcolor,
               iconColor: notifires.getwhiteblackColor,
               titleColor: notifires.getwhiteblackColor,
@@ -77,7 +77,7 @@ class _SettingScreenState extends State<SettingScreen> {
                             const SizedBox(
                               width: 12,
                             ),
-                            Text("Modo escuro".translate(context),
+                            Text("Modo escuro",
                                 style: regular3(context).copyWith(
                                     color: notifires.getGrey2whiteColor)),
                             const Spacer(),
@@ -141,7 +141,7 @@ class _SettingScreenState extends State<SettingScreen> {
                             width: 12,
                           ),
                           Text(
-                            "Alterar Senha".translate(context),
+                            "Alterar Senha",
                             style: regular3(context)
                                 .copyWith(color: notifires.getGrey2whiteColor),
                           ),
@@ -191,7 +191,7 @@ class _SettingScreenState extends State<SettingScreen> {
                             width: 12,
                           ),
                           Text(
-                            "Alterar idioma".translate(context),
+                            "Alterar idioma",
                             style: regular3(context)
                                 .copyWith(color: notifires.getGrey2whiteColor),
                           ),

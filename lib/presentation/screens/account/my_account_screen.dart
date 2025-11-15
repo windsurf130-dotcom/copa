@@ -64,7 +64,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
           surfaceTintColor: notifires.getbgcolor,
           backgroundColor: notifires.getbgcolor,
           title: Text(
-            "Minhas contas".translate(context),
+            "Minhas contas",
             style: headingBlack(context).copyWith(fontSize: 20),
           ),
           centerTitle: true,
@@ -209,7 +209,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                                     ],
                                   ),
                                   Text(
-                                    "AVALIAÇÃO".translate(context),
+                                    "AVALIAÇÃO",
                                     style: regular(context),
                                   )
                                 ],
@@ -222,7 +222,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                                       : Text("0",
                                           style: headingBlackBold(context)),
                                   Text(
-                                    "PEDIDOS".translate(context),
+                                    "PEDIDOS",
                                     style: regular(context),
                                   ),
                                 ],
@@ -236,7 +236,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                                         )
                                       : Text("$currency 0",
                                           style: headingBlackBold(context)),
-                                  Text("Earnings".translate(context),
+                                  Text("Earnings",
                                       style: regular(context)),
                                 ],
                               )
@@ -244,7 +244,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                       );
                     }),
                     const SizedBox(height: 20),
-                    Text("QUICK LINKS".translate(context),
+                    Text("QUICK LINKS",
                         style: headingBlack(context)),
                     const SizedBox(height: 15),
                     CustomRowAccountItem(
@@ -376,11 +376,11 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                           title: "Sair",
                           onTap: () {
                             showDynamicBottomSheets(context,
-                                title: "Sair".translate(context),
+                                title: "Sair",
                                 description: "Tem certeza de que deseja sair??"
-                                    .translate(context),
-                                firstButtontxt: "Cancel".translate(context),
-                                secondButtontxt: "Yes".translate(context),
+                                    ,
+                                firstButtontxt: "Cancel",
+                                secondButtontxt: "Yes",
                                 onpressed: () {
                               Navigator.pop(context);
                             }, onpressed1: () async {
@@ -395,7 +395,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                   ]),
                 ),
                 const SizedBox(height: 20),
-                Text("${"Version".translate(context)} 1.0.0",style: regular(context),),
+                Text("${"Version"} 1.0.0",style: regular(context),),
                 const SizedBox(height: 90),
               ],
             ),
@@ -453,7 +453,7 @@ class CustomRowAccountItem extends StatelessWidget {
                         : const SizedBox()),
                 const SizedBox(width: 10),
                 Text(
-                  title.translate(context),
+                  title,
                   style: heading3Grey1(context),
                 ),
               ],

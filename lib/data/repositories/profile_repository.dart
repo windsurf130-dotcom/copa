@@ -42,13 +42,13 @@ class ProfileRepository {
       BuildContext context, String data) async {
     try {
       dynamic response;
-      if (data == "About Us".translate(context)) {
+      if (data == "About Us") {
         response = await httpGet(Config.staticPage, {"id": "2"},
             context: navigatorKey.currentContext!);
-      } else if (data == "Help and Support".translate(context)) {
+      } else if (data == "Help and Support") {
         response = await httpGet(Config.staticPage, {"id": "4"},
             context: navigatorKey.currentContext!);
-      } else if (data == "Give us feedback".translate(context)) {
+      } else if (data == "Give us feedback") {
         response = await httpGet(Config.staticPage, {"id": "25"},
             context: navigatorKey.currentContext!);
       } else if (data == "Terms and conditions" || data == "Privacy Policy") {

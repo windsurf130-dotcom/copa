@@ -104,7 +104,7 @@ class _DriverFAQScreenState extends State<DriverFAQScreen> {
                   const SizedBox(width: 12),
                   Expanded(
                     child: Text(
-                      faq["question"]!.translate(context),
+                      faq["question"]!,
                       style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
@@ -125,7 +125,7 @@ class _DriverFAQScreenState extends State<DriverFAQScreen> {
                       const SizedBox(width: 10),
                       Expanded(
                         child: Text(
-                          faq["answer"]!.translate(context),
+                          faq["answer"]!,
                           style: const TextStyle(
                             fontSize: 15,
                             color: Colors.black87,

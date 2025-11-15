@@ -284,7 +284,7 @@ class _DriverDocumentScreenState extends State<DriverDocumentScreen> {
 
     if ((oldFront.isEmpty || oldBack.isEmpty) &&
         (cubitState.frontImage!.isEmpty || cubitState.backImage!.isEmpty)) {
-      showErrorToastMessage("Select image first".translate(context));
+      showErrorToastMessage("Select image first");
       return;
     }
 

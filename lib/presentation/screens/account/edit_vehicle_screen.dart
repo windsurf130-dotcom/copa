@@ -91,29 +91,29 @@ class _EditVehicleScreenState extends State<EditVehicleScreen> {
 
 
                   if (state.state.vehicleTypeId.isEmpty) {
-                    showErrorToastMessage("Selecione o tipo de veículo".translate(context));
+                    showErrorToastMessage("Selecione o tipo de veículo");
                     return;
                   }
                   if (state.state.vehicleMake.isEmpty) {
-                    showErrorToastMessage("Selecione o tipo de marca".translate(context));
+                    showErrorToastMessage("Selecione o tipo de marca");
                     return ;
                   }
                   if (state.textEditingVehicleModelController.text.isEmpty) {
-                    showErrorToastMessage("Selecione o tipo de modelo".translate(context));
+                    showErrorToastMessage("Selecione o tipo de modelo");
                     return ;
                   }
                   if (state.textEditingVehicleNumberController.text.isEmpty) {
                     showErrorToastMessage(
-                        "Digite a matrícula do veículo".translate(context));
+                        "Digite a matrícula do veículo");
                     return ;
                   }
                   if ( state.textEditingVehicleColorController.text.isEmpty) {
                     showErrorToastMessage(
-                        "Insira a cor do veículo".translate(context));
+                        "Insira a cor do veículo");
                     return ;
                   }
                   if (state.state.vehicleYear.isEmpty) {
-                    showErrorToastMessage("Insira o ano do veículo".translate(context));
+                    showErrorToastMessage("Insira o ano do veículo");
                     return ;
                   }
                   metaDataMap.insertToMap("ano", state.state.vehicleYear);

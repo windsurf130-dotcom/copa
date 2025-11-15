@@ -74,7 +74,7 @@ class _EditProfileState extends State<EditProfile> {
     return Scaffold(
       backgroundColor: whiteColor,
       appBar: CustomAppBar(
-        title: "Editar Perfil".translate(context),
+        title: "Editar Perfil",
         onBackTap: () {
           goBack();
         },
@@ -186,7 +186,7 @@ class _EditProfileState extends State<EditProfile> {
                     TextFieldAdvance(
                         icons: Icon(Icons.person_2_outlined,
                             color: notifires.getGrey2whiteColor),
-                        txt: "Digite seu nome".translate(context),
+                        txt: "Digite seu nome",
                         textEditingControllerCommon:
                             textEditingEditProfileNameController,
                         inputType: TextInputType.name,
@@ -206,7 +206,7 @@ class _EditProfileState extends State<EditProfile> {
                           TextFieldAdvance(
                               icons: Icon(Icons.email_outlined,
                                   color: notifires.getGrey2whiteColor),
-                              txt: "Digite seu e-mail".translate(context),
+                              txt: "Digite seu e-mail",
                               readOnly: true,
                               textEditingControllerCommon:
                                   textEditingEditProfileEmailController,
@@ -260,7 +260,7 @@ class _EditProfileState extends State<EditProfile> {
                             TextFieldAdvance(
                                 icons: Icon(Icons.call_outlined,
                                     color: notifires.getGrey2whiteColor),
-                                txt: "Digite seu celular".translate(context),
+                                txt: "Digite seu celular",
                                 readOnly: true,
                                 textEditingControllerCommon:
                                     textEditingEditProfileNumberController,
@@ -307,15 +307,15 @@ class _EditProfileState extends State<EditProfile> {
                     BlocBuilder<GenderCubit, String>(
                         builder: (context, gender) {
                           return CustomDropdown(
-                            selectedEditInitialValue: gender.translate(context),
+                            selectedEditInitialValue: gender,
                             prefixIconColor: blackColor,
                             textStyle: regularBlack(context).copyWith(fontSize: 16),
                             prefixIconImage: "assets/images/gender-icon.png",
-                            options: optionsList.map((e) => e.translate(context)).toList(),
+                            options: optionsList.map((e) => e).toList(),
                             onSelected: (value) {
                               loginModel!.data!.gender = value;
                             },
-                            hintText: "Gênero".translate(context),
+                            hintText: "Gênero",
                             checkmarkColor: acentColor,
                           );
                         })
@@ -325,11 +325,11 @@ class _EditProfileState extends State<EditProfile> {
             ),
             CustomsButtons(
                 textColor: blackColor,
-                text: "Atualizar Perfil".translate(context),
+                text: "Atualizar Perfil",
                 backgroundColor: themeColor,
                 onPressed: () {
                   if (loginModel!.data!.gender == null) {
-                    showErrorToastMessage("Por favor, selecione o gênero".translate(context));
+                    showErrorToastMessage("Por favor, selecione o gênero");
                     return;
                   }
                   context
@@ -359,7 +359,7 @@ class _EditProfileState extends State<EditProfile> {
             children: [
               Icon(Icons.camera_alt, color: themeColor),
               const SizedBox(width: 10),
-              Text("Camera".translate(context)),
+              Text("Camera"),
             ],
           ),
           onTap: () {
@@ -371,7 +371,7 @@ class _EditProfileState extends State<EditProfile> {
             children: [
               Icon(Icons.photo, color: themeColor),
               const SizedBox(width: 10),
-              Text("Galeria".translate(context)),
+              Text("Galeria"),
             ],
           ),
           onTap: () {

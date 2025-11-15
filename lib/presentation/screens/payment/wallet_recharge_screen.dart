@@ -56,7 +56,7 @@ class _WalletRechargeScreenState extends State<WalletRechargeScreen> {
     return Scaffold(
       backgroundColor: notifires.getbgcolor,
       appBar: CustomAppBar(
-        title: "Adicionar dinheiro".translate(context),
+        title: "Adicionar dinheiro",
 
         titleColor: notifires.getwhiteblackColor,
         backgroundColor: notifires.getbgcolor,
@@ -98,7 +98,7 @@ class _WalletRechargeScreenState extends State<WalletRechargeScreen> {
 
               // 💵 Compact Amount Input
               Text(
-                "Insira o valor".translate(context),
+                "Insira o valor",
                 style: heading3Grey1(context),
               ),
               const SizedBox(height: 8),
@@ -153,7 +153,7 @@ class _WalletRechargeScreenState extends State<WalletRechargeScreen> {
                         ),
                         decoration: InputDecoration(
                           border: InputBorder.none,
-                          hintText: "Insira o valor...".translate(context),
+                          hintText: "Insira o valor...",
                           hintStyle: TextStyle(
                             color: notifires.getGrey3whiteColor.withOpacity(0.7),
                             fontSize: 14,
@@ -181,7 +181,7 @@ class _WalletRechargeScreenState extends State<WalletRechargeScreen> {
               const SizedBox(height: 20),
 
               Text(
-                "Seleção rápida".translate(context),
+                "Seleção rápida",
                 style: heading3Grey1(context),
               ),
               const SizedBox(height: 12),
@@ -251,7 +251,7 @@ class _WalletRechargeScreenState extends State<WalletRechargeScreen> {
                 child: CustomsButtons(text: "Proceder ao pagamento", backgroundColor: themeColor,  onPressed: () {
                   if (preçoController.text.isEmpty) {
                     showErrorToastMessage(
-                        "Insira o valor".translate(context));
+                        "Insira o valor");
                     return;
                   }
                   navigateToUrl(
@@ -279,7 +279,7 @@ class _WalletRechargeScreenState extends State<WalletRechargeScreen> {
                     Icon(Icons.security,size: 12,color: grey4,),
                     const SizedBox(width: 10,),
                     Text(
-                      "Pagamento seguro com tecnologia To Chegando Delivery".translate(context),
+                      "Pagamento seguro com tecnologia To Chegando Delivery",
                       style: regular(context),
                     ),
                   ],

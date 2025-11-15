@@ -87,10 +87,10 @@ class _OnboardingscreenState extends State<Onboardingscreen> {
                           image: content[index]["image"],
                           title: content[index]["title"]
                               .toString()
-                              .translate(context),
+                              ,
                           description: content[index]["description"]
                               .toString()
-                              .translate(context),
+                              ,
                         );
                       }),
                 ),

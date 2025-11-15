@@ -26,7 +26,7 @@ class _ChangeLanguageState extends State<ChangeLanguage> {
     return Scaffold(
       backgroundColor: notifires.getbgcolor,
       appBar: CustomAppBar(
-        title: "Language".translate(context),
+        title: "Language",
         backgroundColor: notifires.getbgcolor,
         isCenterTitle: true,
         titleColor: notifires.getwhiteblackColor,

@@ -46,7 +46,7 @@ class _VehicleInformationScreenState extends State<VehicleInformationScreen> {
     return Scaffold(
       backgroundColor: notifires.getbgcolor,
       appBar: CustomAppBars(
-          title: "Informações do veículo".translate(context),
+          title: "Informações do veículo",
           backgroundColor: notifires.getbgcolor,
           titleColor: notifires.getGrey1whiteColor),
       body: BlocBuilder<GetItemVehicleDataCubit, GetItemVehicleDataState>(
@@ -146,7 +146,7 @@ class _VehicleInformationScreenState extends State<VehicleInformationScreen> {
                   style: heading2Grey1(context).copyWith(color: Colors.white),
                 ),
                 Text(
-                  "${itemVehicleModel?.vehicleModel ?? "Desconhecido".translate(context)} • ${itemVehicleModel?.vehicleYear ?? ""}",
+                  "${itemVehicleModel?.vehicleModel ?? "Desconhecido"} • ${itemVehicleModel?.vehicleYear ?? ""}",
                   style: heading3Grey1(context).copyWith(color: grey5),
                 ),
               ],
@@ -203,7 +203,7 @@ class _VehicleInformationScreenState extends State<VehicleInformationScreen> {
                             horizontal: 6, vertical: 4),
                         color: Colors.black54, // semi-transparent background
                         child: Text(
-                          "Licença de veículo".translate(context),
+                          "Licença de veículo",
                           style: heading3Grey1(context)
                               .copyWith(color: Colors.white, fontSize: 12),
                           maxLines: 1,
@@ -260,7 +260,7 @@ class _VehicleInformationScreenState extends State<VehicleInformationScreen> {
                             horizontal: 6, vertical: 4),
                         color: Colors.black54,
                         child: Text(
-                          "Documento do Veículo".translate(context),
+                          "Documento do Veículo",
                           style: heading3Grey1(context)
                               .copyWith(color: Colors.white, fontSize: 12),
                           maxLines: 1,
@@ -289,7 +289,7 @@ class _VehicleInformationScreenState extends State<VehicleInformationScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Detalhes do Veículo".translate(context),
+            "Detalhes do Veículo",
             style: heading2Grey1(context),
           ),
           const SizedBox(
@@ -310,7 +310,7 @@ class _VehicleInformationScreenState extends State<VehicleInformationScreen> {
                 child: buildInfoTile(
                   icon: Icons.directions_car_filled,
                   label: "Marca",
-                  value: selectedMake == "N/A" ? "N/A".translate(context) : selectedMake,
+                  value: selectedMake == "N/A" ? "N/A" : selectedMake,
                   iconColor: Colors.teal,
                 ),
               ),
@@ -391,7 +391,7 @@ class _VehicleInformationScreenState extends State<VehicleInformationScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(label.translate(context),
+                Text(label,
                     style: TextStyle(fontSize: 13, color: Colors.grey[600])),
                 const SizedBox(height: 4),
                 Text(value,

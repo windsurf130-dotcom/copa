@@ -108,13 +108,13 @@ class _ProfileState extends State<Profile> {
             TextFieldAdvance(
                 icons: Icon(Icons.person_2_outlined,
                     color: notifires.getGrey3whiteColor),
-                txt: "Name".translate(context),
+                txt: "Name",
                 hintStyle: regular(context),
                 validator: (value) {
                   if (isValidName(value!)) {
                     return null;
                   } else {
-                    return "Name is invalid".translate(context);
+                    return "Name is invalid";
                   }
                 },
                 onChange: (value) {
@@ -131,7 +131,7 @@ class _ProfileState extends State<Profile> {
               child: TextFieldAdvance(
                   icons: Icon(Icons.email_outlined,
                       color: notifires.getGrey3whiteColor),
-                  txt: "Email".translate(context),
+                  txt: "Email",
                   hintStyle: regular(context),
                   textEditingControllerCommon:
                       textEditingEditProfileEmailController,
@@ -147,7 +147,7 @@ class _ProfileState extends State<Profile> {
               child: TextFieldAdvance(
                   icons: Icon(Icons.call_outlined,
                       color: notifires.getGrey3whiteColor),
-                  txt: "Phone".translate(context),
+                  txt: "Phone",
                   hintStyle: regular(context),
                   textEditingControllerCommon:
                       textEditingEditProfileNumberController,
@@ -163,7 +163,7 @@ class _ProfileState extends State<Profile> {
                 loginModel!.data!.gender = value;
               },
               selectedEditInitialValue: loginModel?.data?.gender ?? "",
-              hintText: "Gender".translate(context),
+              hintText: "Gender",
               checkmarkColor: acentColor,
             ),
           ]);

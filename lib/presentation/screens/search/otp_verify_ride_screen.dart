@@ -88,7 +88,7 @@ class _OtpVerifyRideScreenState extends State<OtpVerifyRideScreen> {
                               color: Colors.redAccent, size: 48),
                           const SizedBox(height: 10),
                           Text(
-                            "Ride Cancelled".translate(context),
+                            "Ride Cancelled",
                             textAlign: TextAlign.center,
                             style: heading2Grey1(context),
                           ),
@@ -96,7 +96,7 @@ class _OtpVerifyRideScreenState extends State<OtpVerifyRideScreen> {
                       ),
                       content: Text(
                         "The rider has cancelled the ride request.\n\nYou can head back to the home screen and wait for another ride."
-                            .translate(context),
+                            ,
                         textAlign: TextAlign.center,
                         style: regular2(context),
                       ),
@@ -127,7 +127,7 @@ class _OtpVerifyRideScreenState extends State<OtpVerifyRideScreen> {
                                 const Icon(Icons.home, color: Colors.white),
                                 const SizedBox(width: 8),
                                 Text(
-                                  "Go Home".translate(context),
+                                  "Go Home",
                                   style: const TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
@@ -160,7 +160,7 @@ class _OtpVerifyRideScreenState extends State<OtpVerifyRideScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                          "${"Order ID".translate(context)}:${context.read<UpdateDriverParameterCubit>().state.rideId.isNotEmpty ? context.read<UpdateDriverParameterCubit>().state.rideId : " DR3040539495944"}",
+                          "${"Order ID"}:${context.read<UpdateDriverParameterCubit>().state.rideId.isNotEmpty ? context.read<UpdateDriverParameterCubit>().state.rideId : " DR3040539495944"}",
                           style: headingBlack(context)
                               .copyWith(color: blackColor)),
                       Text(widget.userName,
@@ -190,7 +190,7 @@ class _OtpVerifyRideScreenState extends State<OtpVerifyRideScreen> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        "Enter Verification Code".translate(context),
+                        "Enter Verification Code",
                         style: headingBlack(context).copyWith(fontSize: 17),
                         textAlign: TextAlign.center,
                       ),
@@ -253,7 +253,7 @@ class _OtpVerifyRideScreenState extends State<OtpVerifyRideScreen> {
                       ),
                       const SizedBox(height: 10),
                       Text(
-                        "Please ask customer for OTP".translate(context),
+                        "Please ask customer for OTP",
                         style: regular(context),
                       ),
                     ],

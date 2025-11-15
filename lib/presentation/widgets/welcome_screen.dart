@@ -32,13 +32,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               const SizedBox(height: 120),
               Image.asset("assets/images/wellcomeImg.png"),
               const SizedBox(height: 15),
-              Text("Congratulation".translate(context),
+              Text("Congratulation",
                   style: headingBlackBold(context).copyWith(fontSize: 20)),
               const SizedBox(height: 10),
               Text(
                 textAlign: TextAlign.center,
                 "Your document uploaded successfully ! Your document is pending approval, please wait.."
-                    .translate(context),
+                    ,
                 style: regularBlack(context).copyWith(fontSize: 14),
               )
             ],
@@ -49,7 +49,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
         child: CustomsButtons(
             textColor: blackColor,
-            text: "${"Go to Home".translate(context)} >",
+            text: "${"Go to Home"} >",
             backgroundColor: themeColor,
             onPressed: () {
 

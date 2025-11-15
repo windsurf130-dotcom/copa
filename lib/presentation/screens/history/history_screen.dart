@@ -114,7 +114,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
             : AppBar(
                 surfaceTintColor: whiteColor,
                 title: Text(
-                  "Histórico".translate(context),
+                  "Histórico",
                   style: headingBlack(context)
                       .copyWith(fontSize: 22, color: blackColor),
                 ),
@@ -159,7 +159,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
                           fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal,
                         ),
                         child: Text(
-                          statuses[index].translate(context),
+                          statuses[index],
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -228,7 +228,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
                   child: bookings.isEmpty
                       ? Center(
                           child: Text(
-                          "Nenhum dado disponível".translate(context),
+                          "Nenhum dado disponível",
                           style: regular2(context),
                         ))
                       : ListView.builder(
@@ -277,7 +277,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
                                                 rideData.status!),
                                           ),
                                           child: Text(
-                                            rideData.status!.translate(context),
+                                            rideData.status!,
                                             style:
                                                 headingBlack(context).copyWith(
                                               color: getStatusColor(

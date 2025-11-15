@@ -24,9 +24,9 @@ class _NotificationScreenState extends State<NotificationScreen> {
   String _getTranslatedMessage(String message) {
     if (message.startsWith("Sua reserva #")) {
       final bookingNumber = message.split('#')[1].split(' ')[0];
-      return "Sua reserva nº %s foi concluída com sucesso..".translate(context).replaceAll("%s", bookingNumber);
+      return "Sua reserva nº %s foi concluída com sucesso..".replaceAll("%s", bookingNumber);
     }
-    return message.translate(context);
+    return message;
   }
 
   @override
@@ -34,7 +34,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
     return Scaffold(
       backgroundColor: whiteColor,
       appBar: CustomAppBar(
-        title: "Notificações".translate(context),
+        title: "Notificações",
         onBackTap: () {
           goBack();
         },
@@ -70,7 +70,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-notification["tipo"]!.translate(context),
+notification["tipo"]!,
                             style: headingBlackBold(context)
                                 .copyWith(fontSize: 18),
                             softWrap: true,

@@ -111,18 +111,18 @@ class _RideScreenState extends State<RideScreens> {
             children: [
               const Icon(Icons.warning_amber_rounded, color: Colors.orange, size: 30),
               const SizedBox(width: 10),
-              Text("Leave Ride?".translate(context),style: heading1Grey1(context),),
+              Text("Leave Ride?",style: heading1Grey1(context),),
             ],
           ),
           content:   Text(
-            "If you go home now, this ride will be canceled.\nAre you sure you want to leave?".translate(context),
+            "If you go home now, this ride will be canceled.\nAre you sure you want to leave?",
             style: regular2(context),
           ),
           actionsPadding: const EdgeInsets.all(12),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(ctx),
-              child:   Text("No, Stay".translate(context),style: heading3Grey1(context).copyWith(fontSize: 15),),
+              child:   Text("No, Stay",style: heading3Grey1(context).copyWith(fontSize: 15),),
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -136,7 +136,7 @@ class _RideScreenState extends State<RideScreens> {
                 Navigator.pop(ctx);
                 onConfirm();
               },
-              child:   Text("Yes, Go Home".translate(context),style: heading3Grey1(context).copyWith(color: blackColor,fontSize: 15),),
+              child:   Text("Yes, Go Home",style: heading3Grey1(context).copyWith(color: blackColor,fontSize: 15),),
             ),
           ],
         );
@@ -201,7 +201,7 @@ class _RideScreenState extends State<RideScreens> {
                                   color: Colors.redAccent, size: 48),
                               const SizedBox(height: 10),
                               Text(
-                                "Ride Cancelled".translate(context),
+                                "Ride Cancelled",
                                 textAlign: TextAlign.center,
                                 style: heading2Grey1(context),
                               ),
@@ -209,7 +209,7 @@ class _RideScreenState extends State<RideScreens> {
                           ),
                           content: Text(
                             "The rider has cancelled the ride request.\n\nYou can head back to the home screen and wait for another ride."
-                                .translate(context),
+                                ,
                             textAlign: TextAlign.center,
                             style: regular2(context),
                           ),
@@ -235,7 +235,7 @@ class _RideScreenState extends State<RideScreens> {
                                     const Icon(Icons.home, color: Colors.white),
                                     const SizedBox(width: 8),
                                     Text(
-                                      "Go Home".translate(context),
+                                      "Go Home",
                                       style: const TextStyle(
                                         color: Colors.black,
                                         fontSize: 16,
@@ -392,12 +392,12 @@ class _RideScreenState extends State<RideScreens> {
                                     ),
                                     const SizedBox(height: 12),
                                     Text(
-                                      "Something went wrong".translate(context),
+                                      "Something went wrong",
                                       style: heading2Grey1(context),
                                     ),
                                     const SizedBox(height: 6),
                                     Text(
-                                      "Please retry again".translate(context),
+                                      "Please retry again",
                                       textAlign: TextAlign.center,
                                       style: regular2(context),
                                     ),
@@ -433,7 +433,7 @@ class _RideScreenState extends State<RideScreens> {
                                           icon: const Icon(Icons.refresh,
                                               color: Colors.white),
                                           label:   Text(
-                                              "Retry".translate(context),
+                                              "Retry",
                                               style: heading3Grey1(context).copyWith(color: whiteColor)),
                                         ),
                                         const SizedBox(width: 10,),
@@ -461,7 +461,7 @@ class _RideScreenState extends State<RideScreens> {
                                               borderRadius: BorderRadius.circular(12),
                                             ),
                                           ),
-                                          label: Text("Go Home".translate(context),
+                                          label: Text("Go Home",
                                               style: heading3Grey1(context)
                                                   .copyWith(color: blackColor, fontSize: 14)),
                                         ),
@@ -791,7 +791,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                         children: [
                           const Icon(Icons.arrow_upward, size: 25),
                           Text(
-                            "Go to Drop".translate(context),
+                            "Go to Drop",
                             style: headingBlackBold(context)
                                 .copyWith(fontSize: 14),
                           ),
@@ -824,7 +824,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const SizedBox(height: 20),
-                        Text("Drop Location".translate(context),
+                        Text("Drop Location",
                             style: regular2(context)),
                         const SizedBox(height: 15),
                         Row(
@@ -1076,7 +1076,7 @@ class RetryWithGoHome extends StatelessWidget {
             myAssetImage("assets/images/something.png",height: 120,width: 120),
             const SizedBox(height: 12),
             Text(
-              "Something went wrong".translate(context),
+              "Something went wrong",
               style: heading3Grey1(context).copyWith(color: grey2),
               textAlign: TextAlign.center,
             ),
@@ -1084,7 +1084,7 @@ class RetryWithGoHome extends StatelessWidget {
 
 
             Text(
-              "Please try again".translate(context),
+              "Please try again",
               style: regular3(context),
               textAlign: TextAlign.center,
             ),
@@ -1110,7 +1110,7 @@ class RetryWithGoHome extends StatelessWidget {
                       borderRadius: BorderRadius.circular(12),
                     ),
                   ),
-                  label:   Text("Try Again".translate(context),style: heading3Grey1(context).copyWith(color: Colors.white,fontSize: 15),),
+                  label:   Text("Try Again",style: heading3Grey1(context).copyWith(color: Colors.white,fontSize: 15),),
                 ),
                 if (hasRetried) ...[
                   const SizedBox(width: 12),
@@ -1127,7 +1127,7 @@ class RetryWithGoHome extends StatelessWidget {
                         borderRadius: BorderRadius.circular(12),
                       ),
                     ),
-                    label:   Text("Go Home".translate(context),style: heading3Grey1(context).copyWith(color:  blackColor,fontSize: 15)),
+                    label:   Text("Go Home",style: heading3Grey1(context).copyWith(color:  blackColor,fontSize: 15)),
                   ),
                 ],
               ],

@@ -88,7 +88,7 @@ class CustomsButtons extends StatelessWidget {
               if (icon != null) icon!,
               const SizedBox(width: 10),
               Text(
-                text.translate(context),
+                text,
                 overflow: TextOverflow.ellipsis,
                 maxLines: 1,
                 style: headingBlackBold(context)
@@ -156,7 +156,7 @@ class CustomAppBars extends StatelessWidget implements PreferredSizeWidget {
           ),
         ),
       ),
-      title: Text(title.translate(context),
+      title: Text(title,
           style: heading2Grey1(context).copyWith(color: titleColor)),
       actions: actions,
     );
@@ -215,13 +215,13 @@ class _UploadItemState extends State<UploadItem> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    widget.title.translate(context),
+                    widget.title,
                     style: const TextStyle(
                         fontSize: 15, fontWeight: FontWeight.bold),
                     softWrap: true,
                   ),
                   Text(
-                    widget.subtitle.translate(context),
+                    widget.subtitle,
                     style: const TextStyle(color: Colors.grey),
                     softWrap: true,
                   ),
@@ -304,7 +304,7 @@ class _CustomBottomSheetDriverState extends State<CustomBottomSheetDriver> {
           children: [
             ListTile(
               leading: const Icon(Icons.camera_alt),
-              title: Text("Take a Photo".translate(context)),
+              title: Text("Take a Photo"),
               onTap: () {
                 Navigator.pop(context);
                 _pickImage(onSelect: onSelect, source: ImageSource.camera);
@@ -312,7 +312,7 @@ class _CustomBottomSheetDriverState extends State<CustomBottomSheetDriver> {
             ),
             ListTile(
               leading: const Icon(Icons.photo_library),
-              title: Text("Choose from Gallery".translate(context)),
+              title: Text("Choose from Gallery"),
               onTap: () {
                 Navigator.pop(context);
                 _pickImage(onSelect: onSelect, source: ImageSource.gallery);
@@ -355,14 +355,14 @@ class _CustomBottomSheetDriverState extends State<CustomBottomSheetDriver> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              widget.title?.translate(context) ??
-                                  "Driving License".translate(context),
+                              widget.title? ??
+                                  "Driving License",
                               style: const TextStyle(
                                   fontSize: 18, fontWeight: FontWeight.w600),
                             ),
                             const SizedBox(height: 5),
                             Text(
-                              widget.description?.translate(context) ??
+                              widget.description? ??
                                   "Please upload both front and back images",
                               style: const TextStyle(
                                   fontSize: 14, color: Colors.grey),
@@ -380,7 +380,7 @@ class _CustomBottomSheetDriverState extends State<CustomBottomSheetDriver> {
 
                   // Front License
                   buildImageSection(
-                    label: "Front License".translate(context),
+                    label: "Front License",
                     file: frontImage,
                     fallbackUrl: widget.frontImageUrl,
                     onSelect: (file, base64) {
@@ -395,7 +395,7 @@ class _CustomBottomSheetDriverState extends State<CustomBottomSheetDriver> {
 
    
                   buildImageSection(
-                    label: "Back License".translate(context),
+                    label: "Back License",
                     file: backImage,
                     fallbackUrl: widget.backImageUrl,
                     onSelect: (file, base64) {
@@ -445,7 +445,7 @@ class _CustomBottomSheetDriverState extends State<CustomBottomSheetDriver> {
                           color: Colors.white, strokeWidth: 2),
                     )
                         : Text(
-                      "Upload".translate(context),
+                      "Upload",
                       style: const TextStyle(
                           color: Colors.white,
                           fontSize: 16,
@@ -618,7 +618,7 @@ class _CustomBottomSheetDocumentState extends State<CustomBottomSheetDocument> {
           children: [
             ListTile(
               leading: const Icon(Icons.camera_alt),
-              title: Text("Take a Photo".translate(context)),
+              title: Text("Take a Photo"),
               onTap: () {
                 Navigator.pop(context);
                 _pickImage(onSelect: onSelect, source: ImageSource.camera);
@@ -626,7 +626,7 @@ class _CustomBottomSheetDocumentState extends State<CustomBottomSheetDocument> {
             ),
             ListTile(
               leading: const Icon(Icons.photo_library),
-              title: Text("Choose from Gallery".translate(context)),
+              title: Text("Choose from Gallery"),
               onTap: () {
                 Navigator.pop(context);
                 _pickImage(onSelect: onSelect, source: ImageSource.gallery);
@@ -669,13 +669,13 @@ class _CustomBottomSheetDocumentState extends State<CustomBottomSheetDocument> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              widget.title?.translate(context) ?? "Document",
+                              widget.title? ?? "Document",
                               style: const TextStyle(
                                   fontSize: 18, fontWeight: FontWeight.w600),
                             ),
                             const SizedBox(height: 5),
                             Text(
-                              widget.description?.translate(context) ??
+                              widget.description? ??
                                   "Please upload both front and back images",
                               style: const TextStyle(
                                   fontSize: 14, color: Colors.grey),
@@ -762,7 +762,7 @@ class _CustomBottomSheetDocumentState extends State<CustomBottomSheetDocument> {
                           color: Colors.white, strokeWidth: 2),
                     )
                         : Text(
-                      "Upload".translate(context),
+                      "Upload",
                       style: const TextStyle(
                           color: Colors.white,
                           fontSize: 16,
@@ -1230,7 +1230,7 @@ class _CustomBottomSheetVechicleState extends State<CustomBottomSheetVechicle> {
                               ? Row(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
-                                    Text("${"change".translate(context)} >",
+                                    Text("${"change"} >",
                                         style: regularBlack(context))
                                   ],
                                 )
@@ -1324,7 +1324,7 @@ class _CustomBottomSheetVechicleState extends State<CustomBottomSheetVechicle> {
                                                         color: Colors.red),
                                                     Text(
                                                         "Failed to load image"
-                                                            .translate(context),
+                                                            ,
                                                         style:
                                                             regular3(context)),
                                                   ],
@@ -1556,7 +1556,7 @@ class _CustomBottomSheetVechicleState extends State<CustomBottomSheetVechicle> {
                       )),
                 ),
                 const SizedBox(height: 10),
-                Text("or".translate(context), textAlign: TextAlign.center),
+                Text("or", textAlign: TextAlign.center),
                 const SizedBox(height: 20),
                 CustomsButtons(
                     icon: Icon(
@@ -1635,21 +1635,21 @@ class _CustomBottomSheetVehicleLicenseState extends State<CustomBottomSheetVehic
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title:   Text("Camera Permission Required".translate(context)),
+        title:   Text("Camera Permission Required"),
         content:   Text(
-          "Camera access is needed to take photos. Please enable it in Settings.".translate(context),
+          "Camera access is needed to take photos. Please enable it in Settings.",
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child:   Text("Cancel".translate(context)),
+            child:   Text("Cancel"),
           ),
           TextButton(
             onPressed: () {
               Navigator.pop(context);
               openAppSettings();
             },
-            child:   Text("Open Settings".translate(context)),
+            child:   Text("Open Settings"),
           ),
         ],
       ),
@@ -1670,7 +1670,7 @@ class _CustomBottomSheetVehicleLicenseState extends State<CustomBottomSheetVehic
           children: [
             ListTile(
               leading: const Icon(Icons.camera_alt),
-              title:   Text("Take a Photo".translate(context)),
+              title:   Text("Take a Photo"),
               onTap: () async {
                 Navigator.pop(context);
                 if (await _requestCameraPermission()) {
@@ -1687,7 +1687,7 @@ class _CustomBottomSheetVehicleLicenseState extends State<CustomBottomSheetVehic
                   } catch (e) {
                     if (mounted) {
                       ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text("${"Error taking photo".translate(context)}: $e")),
+                        SnackBar(content: Text("${"Error taking photo"}: $e")),
                       );
                     }
                   } finally {
@@ -1698,7 +1698,7 @@ class _CustomBottomSheetVehicleLicenseState extends State<CustomBottomSheetVehic
             ),
             ListTile(
               leading: const Icon(Icons.photo_library),
-              title:   Text("Choose from Gallery".translate(context)),
+              title:   Text("Choose from Gallery"),
               onTap: () async {
                 Navigator.pop(context);
                 try {
@@ -1757,7 +1757,7 @@ class _CustomBottomSheetVehicleLicenseState extends State<CustomBottomSheetVehic
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  widget.title?.translate(context) ?? "Vehicle License".translate(context),
+                                  widget.title? ?? "Vehicle License",
                                   style: const TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.w600,
@@ -1765,7 +1765,7 @@ class _CustomBottomSheetVehicleLicenseState extends State<CustomBottomSheetVehic
                                 ),
                                 const SizedBox(height: 5),
                                 Text(
-                                  widget.description?.translate(context) ?? "Please upload both front and back images",
+                                  widget.description? ?? "Please upload both front and back images",
                                   style: const TextStyle(fontSize: 14, color: Colors.grey),
                                 ),
                               ],
@@ -1781,7 +1781,7 @@ class _CustomBottomSheetVehicleLicenseState extends State<CustomBottomSheetVehic
                       BlocBuilder<UpdateLicenceImage,XFile?>(
                           builder: (context,image) {
                             return buildImageSection(
-                              label: "Front License".translate(context),
+                              label: "Front License",
                               file: image??frontImage,
                               fallbackUrl: widget.frontImageUrl,
                               onSelect: (file, base64) async {
@@ -1810,7 +1810,7 @@ class _CustomBottomSheetVehicleLicenseState extends State<CustomBottomSheetVehic
                       BlocBuilder<UpdateLicenceImage2,XFile?>(
                           builder: (context,image) {
                             return buildImageSection(
-                              label: "Back License".translate(context),
+                              label: "Back License",
                               file: image??backImage,
                               fallbackUrl: widget.backImageUrl,
                               onSelect: (file, base64) async {
@@ -1870,7 +1870,7 @@ class _CustomBottomSheetVehicleLicenseState extends State<CustomBottomSheetVehic
                           ),
                         )
                             :   Text(
-                          "Upload License".translate(context),
+                          "Upload License",
                           style: const TextStyle(
                             color: Colors.white,
                             fontSize: 16,
@@ -1913,7 +1913,7 @@ class _CustomBottomSheetVehicleLicenseState extends State<CustomBottomSheetVehic
               InkWell(
                 onTap: isLoading ? null : () => showPickerDialog(onSelect),
                 child:   Text(
-                  "${"Change".translate(context)} >",
+                  "${"Change"} >",
                   style: regular2(context),
                 ),
               ),
@@ -1944,7 +1944,7 @@ class _CustomBottomSheetVehicleLicenseState extends State<CustomBottomSheetVehic
                       children: [
                         const Icon(Icons.upload_rounded, size: 40, color: Colors.grey),
                         const SizedBox(height: 8),
-                        Text("Tap to upload".translate(context), style: regular(context)),
+                        Text("Tap to upload", style: regular(context)),
                       ],
                     ),
                   ),
@@ -2110,7 +2110,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.white,
       centerTitle: isCenterTitle ?? true,
       leadingWidth: 70,
-      title: Text(title.translate(context),
+      title: Text(title,
           style: headingBlack(context).copyWith(
               fontSize: fontSize ?? 18, color: titleColor ?? blackColor)),
       leading: isBackButton == true
@@ -2188,7 +2188,7 @@ class CustomToggleSwitch extends StatelessWidget {
                       : 10,
                   0),
               child: Text(
-                "ON DUTY".translate(context),
+                "ON DUTY",
                 style: headingBlackBold(context)
                     .copyWith(color: greentext, fontSize: 14),
               ),
@@ -2200,7 +2200,7 @@ class CustomToggleSwitch extends StatelessWidget {
                       : -10,
                   0),
               child: Text(
-                "OFF DUTY".translate(context),
+                "OFF DUTY",
                 style: headingBlackBold(context)
                     .copyWith(color: redColor, fontSize: 14),
               ),
@@ -2332,8 +2332,7 @@ class _CustomSlideButtonState extends State<CustomSlideButton>
               Center(
                 child: Text(
                   widget.isOnRide
-                      ? widget.acceptedText.toString().translate(context)
-                      : widget.defaultText.toString().translate(context),
+                      ? widget.acceptedText.toString()                      : widget.defaultText.toString(),
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
@@ -2457,9 +2456,9 @@ class _CustomRideBottomSheetState extends State<CustomRideBottomSheet> {
                           size: 50,
                         ),
                         Text(
-                          widget.pickupString?.translate(context) ??
+                          widget.pickupString? ??
                               "Head to pickup"
-                                  .translate(context), // Dynamic Title
+                                  , // Dynamic Title
                           style:
                               headingBlackBold(context).copyWith(fontSize: 14),
                         ),
@@ -2554,7 +2553,7 @@ class _CustomRideBottomSheetState extends State<CustomRideBottomSheet> {
                                       color: redColor,
                                       borderRadius: BorderRadius.circular(12)),
                                   child: Text(
-                                    "Cancel".translate(context),
+                                    "Cancel",
                                     style: regular(context).copyWith(
                                         color: whiteColor,
                                         fontWeight: FontWeight.bold),
@@ -2567,8 +2566,8 @@ class _CustomRideBottomSheetState extends State<CustomRideBottomSheet> {
                           const Divider(),
                           Text(
                             widget.pickupString.toString() == "Go to Drop"
-                                ? "Drop Location".translate(context)
-                                : "Pickup Location".translate(context),
+                                ? "Drop Location"
+                                : "Pickup Location",
                             style: regular2(context),
                           ),
                           const SizedBox(height: 15),
@@ -2649,14 +2648,14 @@ class _CustomRideBottomSheetState extends State<CustomRideBottomSheet> {
               Icon(Icons.warning_amber_rounded, color: themeColor, size: 40),
               const SizedBox(height: 12),
               Text(
-                "Cancel Ride Confirmation".translate(context),
+                "Cancel Ride Confirmation",
                 style: heading2Grey1(context),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 10),
               Text(
                 "You have already accepted this ride.\nCanceling now may impact your rating or future ride requests."
-                    .translate(context),
+                    ,
                 style: regular(context),
                 textAlign: TextAlign.center,
               ),
@@ -2684,7 +2683,7 @@ class _CustomRideBottomSheetState extends State<CustomRideBottomSheet> {
                         borderRadius: BorderRadius.circular(40),
                       ),
                       child: Text(
-                        "Cancel Ride".translate(context),
+                        "Cancel Ride",
                         style: regular2(context).copyWith(
                             color: Colors.white, fontWeight: FontWeight.bold),
                       ),
@@ -2703,7 +2702,7 @@ class _CustomRideBottomSheetState extends State<CustomRideBottomSheet> {
                         borderRadius: BorderRadius.circular(40),
                       ),
                       child: Text(
-                        "Continue Ride".translate(context),
+                        "Continue Ride",
                         style: regular2(context).copyWith(
                             color: grey1, fontWeight: FontWeight.bold),
                       ),
@@ -3071,7 +3070,7 @@ class DeleteConfirmationDialogs extends StatelessWidget {
               const SizedBox(height: 16),
               Text(
                 "Are you sure you want to delete your account?"
-                    .translate(context),
+                    ,
                 textAlign: TextAlign.center,
                 style: regular(context).copyWith(
                   fontSize: 18,
@@ -3082,7 +3081,7 @@ class DeleteConfirmationDialogs extends StatelessWidget {
               const SizedBox(height: 10),
               Text(
                 "This action is permanent and cannot be undone."
-                    .translate(context),
+                    ,
                 textAlign: TextAlign.center,
                 style: regular(context).copyWith(
                   fontSize: 14,
@@ -3109,7 +3108,7 @@ class DeleteConfirmationDialogs extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 12),
                         child: Text(
-                          'Cancel'.translate(context),
+                          'Cancel',
                           style: heading3Grey1(context),
                         ),
                       ),
@@ -3132,7 +3131,7 @@ class DeleteConfirmationDialogs extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 12),
                         child: Text(
-                          "Yes, Delete".translate(context),
+                          "Yes, Delete",
                           style: heading3Grey1(context).copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -3328,7 +3327,7 @@ class _CustomToastMessagesState extends State<CustomToastMessages>
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        widget.message.translate(context),
+                        widget.message,
                         style:     const TextStyle(
                             fontSize: 14,
                             color: Colors.black87,
@@ -3356,7 +3355,7 @@ class _CustomToastMessagesState extends State<CustomToastMessages>
                 top: 0,
                 left: 16,
                 child: Text(
-                  isError ? "Error!".translate(context) : "Success!".translate(context),
+                  isError ? "Error!" : "Success!",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
@@ -3486,7 +3485,7 @@ class _DynamicBottomSheetContentState extends State<DynamicBottomSheetContent> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Flexible(
-              child: Text(widget.title.translate(context),
+              child: Text(widget.title,
                   style: heading2Grey1(context).copyWith())),
           const SizedBox(height: 20),
           Divider(
@@ -3495,7 +3494,7 @@ class _DynamicBottomSheetContentState extends State<DynamicBottomSheetContent> {
           ),
           const SizedBox(height: 15),
           Flexible(
-              child: Text(widget.description.translate(context),
+              child: Text(widget.description,
                   style: heading3Grey1(context))),
           const SizedBox(height: 30),
           Expanded(
@@ -3520,7 +3519,7 @@ class _DynamicBottomSheetContentState extends State<DynamicBottomSheetContent> {
                                 BorderRadius.circular(Dimensions.radiusLarge),
                           ),
                         ),
-                        child: Text(widget.firstButtontxt.translate(context),
+                        child: Text(widget.firstButtontxt,
                             style: heading3(context)),
                       ),
                     ),
@@ -3542,7 +3541,7 @@ class _DynamicBottomSheetContentState extends State<DynamicBottomSheetContent> {
                                 BorderRadius.circular(Dimensions.radiusLarge),
                           ),
                         ),
-                        child: Text(widget.secondButtontxt.translate(context),
+                        child: Text(widget.secondButtontxt,
                             style: heading3(context)
                                 .copyWith(color: Colors.white)),
                       ),
@@ -3644,7 +3643,7 @@ dialogExit(BuildContext context) {
                 color: redColor,
               ),
               Text(
-                'Do you want to exit?'.translate(context),
+                'Do you want to exit?',
                 textAlign: TextAlign.center,
                 style: headingBlack(context)
                     .copyWith(color: notifires.getwhiteblackColor),
@@ -3671,7 +3670,7 @@ dialogExit(BuildContext context) {
                                   borderRadius: BorderRadius.circular(10)),
                               child: Center(
                                   child: Text(
-                                "Cancel".translate(context),
+                                "Cancel",
                                 style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold),
@@ -3692,7 +3691,7 @@ dialogExit(BuildContext context) {
                                   borderRadius: BorderRadius.circular(10)),
                               child: Center(
                                   child: Text(
-                                "Exit".translate(context),
+                                "Exit",
                                 style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold),
@@ -3996,8 +3995,8 @@ Future<void> showDutyConfirmationDialog({
               const SizedBox(height: 20),
               Text(
                 goingOnline
-                    ? "Go Online?".translate(context)
-                    : "Go Offline?".translate(context),
+                    ? "Go Online?"
+                    : "Go Offline?",
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -4008,9 +4007,9 @@ Future<void> showDutyConfirmationDialog({
               Text(
                 goingOnline
                     ? "You are about to go ON DUTY. Riders will now be able to see and book you."
-                        .translate(context)
+                        
                     : "You are about to go OFF DUTY. You will not receive any more bookings."
-                        .translate(context),
+                        ,
                 textAlign: TextAlign.center,
                 style: const TextStyle(fontSize: 14, color: Colors.black87),
               ),
@@ -4027,7 +4026,7 @@ Future<void> showDutyConfirmationDialog({
                         ),
                       ),
                       child: Text(
-                        "Cancel".translate(context),
+                        "Cancel",
                         style: TextStyle(color: notifires.getGrey1whiteColor),
                       ),
                     ),
@@ -4046,7 +4045,7 @@ Future<void> showDutyConfirmationDialog({
                         ),
                       ),
                       child: Text(
-                        "Confirm".translate(context),
+                        "Confirm",
                         style: TextStyle(color: blackColor),
                       ),
                     ),
@@ -4109,7 +4108,7 @@ Future<void> showDutyConfirmationDialog({
 //             const SizedBox(height: 12),
 //             Padding(
 //               padding: const EdgeInsets.symmetric(horizontal: 10),
-//               child: Text('${widget.text}'.translate(context),
+//               child: Text('${widget.text}',
 //                   textAlign: TextAlign.center,
 //                   style: regular(context).copyWith(
 //                       fontSize: 16, color: notifires.getwhiteblackColor)),
@@ -4141,7 +4140,7 @@ Future<void> showDutyConfirmationDialog({
 //                               borderRadius: BorderRadius.circular(10),
 //                             ),
 //                           ),
-//                           child: Text('Cancel'.translate(context),
+//                           child: Text('Cancel',
 //                               style: heading3Grey1(context)),
 //                         ),
 //                       ),
@@ -4157,7 +4156,7 @@ Future<void> showDutyConfirmationDialog({
 //                             decoration: BoxDecoration(
 //                                 color: blackColor,
 //                                 borderRadius: BorderRadius.circular(10)),
-//                             child: Text('Confirm'.translate(context),
+//                             child: Text('Confirm',
 //                                 style: heading3Grey1(context)
 //                                     .copyWith(color: whiteColor)),
 //                           ),
@@ -4240,7 +4239,7 @@ class PaymentConfirmationDialogsState
 
             // Title
             Text(
-              widget.text?.translate(context) ?? "Confirm Payment",
+              widget.text? ?? "Confirm Payment",
               textAlign: TextAlign.center,
               style: heading3Grey1(context),
             ),
@@ -4277,7 +4276,7 @@ class PaymentConfirmationDialogsState
                           border: Border.all(color: notifires.getBoxColor.withOpacity(0.3), width: 1),
                         ),
                         child: Text(
-                          "Cancel".translate(context),
+                          "Cancel",
                           style: TextStyle(
                             color: notifires.getGrey1whiteColor,
                             fontSize: 14,
@@ -4309,7 +4308,7 @@ class PaymentConfirmationDialogsState
                           ],
                         ),
                         child: Text(
-                          widget.secondButtontext?.translate(context) ?? "Confirm".translate(context),
+                          widget.secondButtontext? ?? "Confirm",
                           style: heading3Grey1(context),
                         ),
                       ),
@@ -4368,14 +4367,14 @@ void loginExpireAlertToExitFromApp({required BuildContext context}) {
                   const SizedBox(height: 5),
                   Text(
                     'Your token is Expired. Please login again.'
-                        .translate(context),
+                        ,
                     textAlign: TextAlign.center,
                     style: headingBlack(context).copyWith(color: blackColor),
                   ),
                   const SizedBox(height: 10),
                   Text(
                     'Redirecting to login in $countdown seconds...'
-                        .translate(context),
+                        ,
                     textAlign: TextAlign.center,
                     style: headingBlack(context).copyWith(
                       fontSize: 14,

@@ -168,7 +168,7 @@ class _PaymentMethodsScreenState extends State<PaymentMethodsScreen> {
     return Scaffold(
       backgroundColor: notifires.getbgcolor,
       appBar: CustomAppBar(
-        title: "Add/Edit Payout Method".translate(context),
+        title: "Add/Edit Payout Method",
         backgroundColor: notifires.getbgcolor,
 
         titleColor: notifires.getGrey1whiteColor,
@@ -233,7 +233,7 @@ class _PaymentMethodsScreenState extends State<PaymentMethodsScreen> {
         const SizedBox(height: 6),
         Text(
           "Adicione sua conta preferida para receber seus pagamentos com segurança.."
-              .translate(context),
+              ,
           style: regular2(context).copyWith(
             fontSize: 14,
             color: notifires.getGrey1whiteColor.withValues(alpha:0.7),
@@ -250,7 +250,7 @@ class _PaymentMethodsScreenState extends State<PaymentMethodsScreen> {
     if (payOutList.isEmpty) {
       return Expanded(
         child: Center(
-          child: Text("Dados não encontrados".translate(context),style: regular2(context),),
+          child: Text("Dados não encontrados",style: regular2(context),),
         ),
       );
     }

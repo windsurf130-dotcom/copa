@@ -580,14 +580,14 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
                                                 const SizedBox(width: 10),
                                                 Expanded(
                                                   child: Text(
-                                                    "Saldo Baixo na Carteira".translate(context),
+                                                    "Saldo Baixo na Carteira",
                                                     style: heading2Grey1(context),
                                                   ),
                                                 ),
                                               ],
                                             ),
                                             content:  Text(
-                                                "Saldo baixo! Recarregue ou adicione dinheiro agora para permanecer ativo na plataforma.".translate(context),
+                                                "Saldo baixo! Recarregue ou adicione dinheiro agora para permanecer ativo na plataforma.",
                                               style: regular2(context),
                                               textAlign: TextAlign.center,
                                             ),
@@ -605,7 +605,7 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
                                                     onPressed: () {
                                                       Navigator.pop(context);
                                                     },
-                                                    child:   Text("Later".translate(context),style: heading3Grey1(context).copyWith(fontWeight: FontWeight.bold,fontSize: 15),),
+                                                    child:   Text("Later",style: heading3Grey1(context).copyWith(fontWeight: FontWeight.bold,fontSize: 15),),
                                                   ),
                                                   ElevatedButton(
                                                     style: ElevatedButton.styleFrom(
@@ -617,7 +617,7 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
                                                       Navigator.pop(context);
                                                       context.read<BottomBarCubit>().changeTabIndex(2);
                                                     },
-                                                    child:   Text("Add Money".translate(context),style: heading3Grey1(context).copyWith(fontWeight: FontWeight.bold,fontSize: 15),),
+                                                    child:   Text("Add Money",style: heading3Grey1(context).copyWith(fontWeight: FontWeight.bold,fontSize: 15),),
                                                   ),
                                                 ],
                                               ),
@@ -696,7 +696,7 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
                                               const SizedBox(height: 16),
                                               Text(
                                                 "Verificação de Conta em Andamento"
-                                                    .translate(context),
+                                                    ,
                                                 style: Theme.of(context)
                                                     .textTheme
                                                     .titleMedium
@@ -708,7 +708,7 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
                                               const SizedBox(height: 10),
                                               Text(
                                                 "Estamos analisando seus documentos. Você terá acesso total assim que a verificação for concluída. Obrigado pela paciência!"
-                                                    .translate(context),
+                                                    ,
                                                 style: Theme.of(context)
                                                     .textTheme
                                                     .bodyMedium,
@@ -836,12 +836,12 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
             ),
             const SizedBox(height: 16),
             Text(
-              "Não foi possível obter a localização".translate(context),
+              "Não foi possível obter a localização",
               style: heading2Grey1(context),
             ),
             const SizedBox(height: 8),
             Text(
-              "Por favor, verifique sua conexão e tente novamente".translate(context),
+              "Por favor, verifique sua conexão e tente novamente",
               style: regular2(context),
               textAlign: TextAlign.center,
             ),
@@ -855,7 +855,7 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
                 });
               },
               icon: const Icon(Icons.refresh),
-              label:   Text("Recarregar Mapa".translate(context),style: heading3Grey1(context),),
+              label:   Text("Recarregar Mapa",style: heading3Grey1(context),),
               style: ElevatedButton.styleFrom(
                 backgroundColor: themeColor,
                 foregroundColor: blackColor,
@@ -882,7 +882,7 @@ class _ItemHomeScreenState extends State<ItemHomeScreen>
       mainAxisSize: MainAxisSize.min,
       children: [
         Text(
-          title.translate(context),
+          title,
           style: headingBlackBold(context).copyWith(fontSize: 14),
         ),
         const SizedBox(height: 4),
@@ -1156,7 +1156,7 @@ class CustomBottomSheetState extends State<CustomBottomSheet>
                                             color: grey3, size: 14),
                                         const SizedBox(width: 5),
                                         Text(
-                                          "${widget.rideRequest!.travelTime}(${(double.parse(widget.rideRequest!.travelDistance)).toStringAsFixed(2)} ${"km".translate(context)})",
+                                          "${widget.rideRequest!.travelTime}(${(double.parse(widget.rideRequest!.travelDistance)).toStringAsFixed(2)} ${"km"})",
                                           style: regular(context),
                                         ),
                                       ],
@@ -1248,7 +1248,7 @@ class CustomBottomSheetState extends State<CustomBottomSheet>
                                           const SizedBox(height: 20),
                                           Text(
                                               "Ponto de Destino Verificado"
-                                                  .translate(context),
+                                                  ,
                                               style: headingBlack(context)
                                                   .copyWith(
                                                   color: notifires
@@ -1335,7 +1335,7 @@ class CustomBottomSheetState extends State<CustomBottomSheet>
                                         color: notifires.getBoxColor,
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Text("Skip".translate(context),
+                                      child: Text("Skip",
                                           style: headingBlack(context)
                                               .copyWith(fontSize: 16)),
                                     ),

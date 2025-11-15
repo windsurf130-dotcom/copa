@@ -99,19 +99,19 @@ class _EditDriverDocumentScreenState extends State<EditDriverDocumentScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: 20),
-                    Text("Required Information".translate(context),
+                    Text("Required Information",
                         style: headingBlack(context).copyWith(fontSize: 20)),
                     const SizedBox(height: 30),
                     InkWell(
                         onTap: () {
                           setState(() {});
                         },
-                        child: Text("Welcome Driver".translate(context),
+                        child: Text("Welcome Driver",
                             style: headingBlack(context))),
                     const SizedBox(height: 5),
                     Text(
                         "Follow these steps to begin your ride."
-                            .translate(context),
+                            ,
                         style: headingBlack(context).copyWith(fontSize: 14)),
                     const SizedBox(height: 40),
                     const DriverDocumentScreen(),

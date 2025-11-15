@@ -67,13 +67,13 @@ class _PaymentGatewayScreenState extends State<PaymentGatewayScreen> {
       endSession(success: true);
       debugPrint('✅ wallet_recharge_success');
     } else if (url.contains("wallet_recharge_fail")) {
-      endSession(message: "Your recharge failed".translate(context));
+      endSession(message: "Your recharge failed");
       debugPrint('❌ wallet_recharge_fail');
     } else if (url.contains("payment_fail")) {
-      endSession(message: "Your booking failed".translate(context));
+      endSession(message: "Your booking failed");
       debugPrint('❌ payment_fail');
     } else if (url.contains("/invalid-order")) {
-      endSession(message: "Invalid Order".translate(context));
+      endSession(message: "Invalid Order");
       debugPrint('⚠️ invalid-order');
     }
   }
@@ -143,7 +143,7 @@ class _PaymentGatewayScreenState extends State<PaymentGatewayScreen> {
               children: [
                 const Icon(Icons.timer_off, size: 48, color: Colors.redAccent),
                 const SizedBox(height: 16),
-                Text("Prazo de pagamento expirado".translate(context),
+                Text("Prazo de pagamento expirado",
                     style: heading2Grey1(context)),
                 const SizedBox(height: 12),
                 Text(
@@ -193,12 +193,12 @@ class _PaymentGatewayScreenState extends State<PaymentGatewayScreen> {
               ),
             ),
             const SizedBox(height: 16),
-            Text("Volte?".translate(context),
+            Text("Volte?",
                 style: heading1(context).copyWith(
                     fontWeight: FontWeight.w700,
                     color: notifires.getwhiteblackColor)),
             const SizedBox(height: 10),
-            Text("Tem certeza de que deseja voltar??".translate(context),
+            Text("Tem certeza de que deseja voltar??",
                 textAlign: TextAlign.center,
                 style: regular2(context).copyWith(color: Colors.grey)),
             const SizedBox(height: 24),
@@ -236,7 +236,7 @@ class _PaymentGatewayScreenState extends State<PaymentGatewayScreen> {
         ),
         child: Center(
           child: Text(
-            text.translate(context),
+            text,
             style: regular2(context).copyWith(
               color: filled ? Colors.white : notifires.getwhiteblackColor,
               fontWeight: FontWeight.w600,
@@ -264,7 +264,7 @@ class _PaymentGatewayScreenState extends State<PaymentGatewayScreen> {
         appBar: CustomAppBars(
           backgroundColor: notifires.getbgcolor,
           title:
-          "${"Pagamento".translate(context)} ${widget.fromBooking == true ? widget.price : ""}",
+          "${"Pagamento"} ${widget.fromBooking == true ? widget.price : ""}",
           titleColor: notifires.getwhiteblackColor,
           onBackButtonPressed: _showBackDialog,
           actions: [

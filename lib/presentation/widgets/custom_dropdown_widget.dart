@@ -139,7 +139,7 @@ class CustomDropdownListState extends State<CustomDropdownList> {
               child: Row(
                 children: [
                   Text(
-                    "${"Select".translate(context)} ${widget.hintText.translate(context)}".translate(context),
+                    "${"Select"} ${widget.hintText}",
                     style: heading3Grey1(context),
                   ),
                   const Spacer(),
@@ -157,7 +157,7 @@ class CustomDropdownListState extends State<CustomDropdownList> {
             ),
             filteredOptions.isEmpty?SizedBox(
               height: 350,
-                child: Center(child: Text("No data available".translate(context),style: regular2(context),),)): Expanded(
+                child: Center(child: Text("No data available",style: regular2(context),),)): Expanded(
               child: ListView.separated(
                 itemCount: filteredOptions.length,
                 itemBuilder: (BuildContext context, int index) {
@@ -167,7 +167,7 @@ class CustomDropdownListState extends State<CustomDropdownList> {
                     color: Colors.transparent,
                     child: ListTile(
                       title: Text(
-                        filteredOptions[index].name ?? "select one".translate(context),
+                        filteredOptions[index].name ?? "select one",
                         style: regular2(context),
                       ),
                       trailing: isSelected
@@ -363,7 +363,7 @@ class CustomDropdownState extends State<CustomDropdown> {
               child: Row(
                 children: [
                   Text(
-                    "${"Select".translate(context)} ${widget.hintText.translate(context)}".translate(context),
+                    "${"Select"} ${widget.hintText}",
                     style: heading3Grey1(context),
                   ),
                   const Spacer(),
@@ -388,7 +388,7 @@ class CustomDropdownState extends State<CustomDropdown> {
                     color: Colors.transparent,
                     child: ListTile(
                       title: Text(
-                        filteredOptions[index].toString().translate(context),
+                        filteredOptions[index].toString(),
                         style: regular2(context),
                       ),
                       trailing: isSelected
@@ -449,7 +449,7 @@ class CustomDropdownState extends State<CustomDropdown> {
                   Text(
                     (selectedValue == null || selectedValue!.isEmpty)
                         ? widget.hintText
-                        : selectedValue.toString().translate(context),
+                        : selectedValue.toString(),
                     style: widget.textStyle ?? regular2(context),
                     overflow: TextOverflow.ellipsis,
                   ),

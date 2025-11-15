@@ -83,7 +83,7 @@ class _EmailUpdateScreenState extends State<EmailUpdateScreen> {
                         SvgPicture.asset("assets/images/forgotpass.svg"),
                         const SizedBox(height: 30),
                         Text(
-                          "Alterar E-mail".translate(context),
+                          "Alterar E-mail",
                           style: heading1(context),
                         ),
                         const SizedBox(
@@ -91,7 +91,7 @@ class _EmailUpdateScreenState extends State<EmailUpdateScreen> {
                         ),
                         Text(
                           "Digite seu endereço de e-mail para atualizá-lo facilmente"
-                              .translate(context),
+                              ,
                           style: regular2(context),
                           textAlign: TextAlign.center,
                         ),
@@ -104,7 +104,7 @@ class _EmailUpdateScreenState extends State<EmailUpdateScreen> {
                             children: [
                               TextFieldAdvance(
                                 inputAlignment: TextAlign.start,
-                                txt: "Digite seu e-mail".translate(context),
+                                txt: "Digite seu e-mail",
                                 textEditingControllerCommon: emailText,
                                 inputType: TextInputType.emailAddress,
                                 validator: (value) {
@@ -123,7 +123,7 @@ class _EmailUpdateScreenState extends State<EmailUpdateScreen> {
                                           .changeEmail(emailText.text);
                                     }
                                   },
-                                  text: 'Enviar'.translate(context),
+                                  text: 'Enviar',
                                   textColor: blackColor,
                                   backgroundColor: themeColor),
                             ],
@@ -134,7 +134,7 @@ class _EmailUpdateScreenState extends State<EmailUpdateScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "Tentar novamente".translate(context),
+                              "Tentar novamente",
                               style: regular3(context).copyWith(
                                   color: notifires.getGrey2whiteColor),
                             ),
@@ -146,7 +146,7 @@ class _EmailUpdateScreenState extends State<EmailUpdateScreen> {
                                   navigatorKey.currentState!.pop();
                                 },
                                 child: Text(
-                                  "Voltar".translate(context),
+                                  "Voltar",
                                   style: boldstyle(context)
                                       .copyWith(color: themeColor),
                                 )),

@@ -40,16 +40,16 @@ class _PaymentScreenState extends State<PaymentScreen> {
 
   void _onProceed(BuildContext context, PaymentMethod? method) {
     if (method == null) {
-      showErrorToastMessage("Por favor, selecione um método de pagamento".translate(context));
+      showErrorToastMessage("Por favor, selecione um método de pagamento");
       return;
     }
 
     if (method == PaymentMethod.cash) {
       _showConfirmationDialog(context, "cash",
-          "O pagamento em dinheiro foi recebido? Se sim, clique para continuar.".translate(context));
+          "O pagamento em dinheiro foi recebido? Se sim, clique para continuar.");
     } else if (method == PaymentMethod.online) {
       _showConfirmationDialog(
-          context, "online", "Tem certeza que deseja pagar online?".translate(context));
+          context, "online", "Tem certeza que deseja pagar online?");
     }
   }
 
@@ -121,7 +121,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
       child: Scaffold(
         backgroundColor: whiteColor,
         appBar: CustomAppBar(
-          title: "Resumo da Viagem".translate(context),
+          title: "Resumo da Viagem",
           onBackTap: () async {
 
             _onProceed(context, PaymentMethod.cash);
@@ -201,7 +201,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
         _buildStatusTag(context),
         const SizedBox(height: 15),
         Text(
-          "${'Por favor, cobre a tarifa de'.translate(context)} \n ${widget.rideRequest.customer?.userName ?? ''}.",
+          "${'Por favor, cobre a tarifa de'} \n ${widget.rideRequest.customer?.userName ?? ''}.",
           style: heading3Grey1(context).copyWith(fontSize: 15),
           textAlign: TextAlign.center,
         ),
@@ -229,7 +229,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
         children: [
           Icon(Icons.verified, color: whiteColor, size: 18),
           const SizedBox(width: 10),
-          Text("CORRIDA CONCLUÍDA".translate(context),
+          Text("CORRIDA CONCLUÍDA",
               style: regular(context).copyWith(color: whiteColor,fontWeight: FontWeight.bold)),
         ],
       ),
@@ -298,7 +298,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
               children: [
                 // Pickup
                 Text(
-                  'Coleta'.translate(context),
+                  'Coleta',
                   style: TextStyle(
                     fontSize: 12,
                     color: Colors.green.shade600,
@@ -315,7 +315,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
 
                 // Drop
                 Text(
-                  'Destino'.translate(context),
+                  'Destino',
                   style: TextStyle(
                     fontSize: 12,
                     color: Colors.red.shade600,
@@ -345,14 +345,14 @@ class _PaymentScreenState extends State<PaymentScreen> {
         textColor: blackColor,
         backgroundColor: themeColor,
         onPressed: () => _onProceed(context, selectedMethod),
-        text: "Cobrar".translate(context),
+        text: "Cobrar",
       );
     } else {
       return CustomsButtons(
         textColor: blackColor,
         backgroundColor: themeColor,
         onPressed: () {},
-        text: "Aguardando pagamento...".translate(context),
+        text: "Aguardando pagamento...",
       );
     }
   }

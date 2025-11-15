@@ -72,7 +72,7 @@ class _AllowLocationScreenState extends State<AllowLocationScreen> {
         final result = await Permission.systemAlertWindow.request();
         if (result.isPermanentlyDenied) {
           // ignore: use_build_context_synchronously
-          BotToast.showText(text: "Permissão de sobreposição negada. Ative nas configurações.".translate(context));
+          BotToast.showText(text: "Permissão de sobreposição negada. Ative nas configurações.");
           blocked = true;
         }
       }
@@ -82,7 +82,7 @@ class _AllowLocationScreenState extends State<AllowLocationScreen> {
         final result = await Permission.locationWhenInUse.request();
         if (result.isPermanentlyDenied) {
           // ignore: use_build_context_synchronously
-          BotToast.showText(text: "Permissão de localização negada. Ative nas configurações.".translate(context));
+          BotToast.showText(text: "Permissão de localização negada. Ative nas configurações.");
           blocked = true;
         }
       }
@@ -141,7 +141,7 @@ class _AllowLocationScreenState extends State<AllowLocationScreen> {
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 25.0),
                     child: Text(
-                      permissionText.translate(context),
+                      permissionText,
                       textAlign: TextAlign.center,
                       style: heading3Grey1(context).copyWith(fontSize: 16),
                     ),
@@ -186,7 +186,7 @@ Future<bool> checkAndRequestAlwaysLocationPermission(BuildContext context) async
           children: [
             const Icon(Icons.my_location, color: Colors.blueAccent),
             const SizedBox(width: 8),
-            Text("Ativar Localização em Segundo Plano".translate(context), style: heading2Grey1(context)),
+            Text("Ativar Localização em Segundo Plano", style: heading2Grey1(context)),
           ],
         ),
         content: Column(
@@ -194,7 +194,7 @@ Future<bool> checkAndRequestAlwaysLocationPermission(BuildContext context) async
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Permitir a localização em segundo plano nos ajuda a mostrar solicitações de corrida próximas a você, mesmo quando o aplicativo não estiver aberto. Você pode escolher 'Sempre' na próxima tela, se desejar este recurso.".translate(context),
+              "Permitir a localização em segundo plano nos ajuda a mostrar solicitações de corrida próximas a você, mesmo quando o aplicativo não estiver aberto. Você pode escolher 'Sempre' na próxima tela, se desejar este recurso.",
               style: regular2(context),
             ),
             const SizedBox(height: 12),
@@ -204,7 +204,7 @@ Future<bool> checkAndRequestAlwaysLocationPermission(BuildContext context) async
                 const Icon(Icons.looks_one, size: 20, color: Colors.green),
                 const SizedBox(width: 6),
                 Expanded(
-                  child: Text("Selecione 'Continuar' para revisar as configurações de localização.".translate(context), style: regular(context)),
+                  child: Text("Selecione 'Continuar' para revisar as configurações de localização.", style: regular(context)),
                 ),
               ],
             ),
@@ -215,7 +215,7 @@ Future<bool> checkAndRequestAlwaysLocationPermission(BuildContext context) async
                 const Icon(Icons.looks_two, size: 20, color: Colors.green),
                 const SizedBox(width: 6),
                 Expanded(
-                  child: Text("Em Acesso à Localização, você pode escolher 'Sempre' para permanecer conectado.".translate(context), style: regular(context)),
+                  child: Text("Em Acesso à Localização, você pode escolher 'Sempre' para permanecer conectado.", style: regular(context)),
                 ),
               ],
             ),
@@ -224,7 +224,7 @@ Future<bool> checkAndRequestAlwaysLocationPermission(BuildContext context) async
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: Text("Agora não".translate(context), style: heading3Grey1(context)),
+            child: Text("Agora não", style: heading3Grey1(context)),
           ),
           ElevatedButton.icon(
             onPressed: () {
@@ -232,7 +232,7 @@ Future<bool> checkAndRequestAlwaysLocationPermission(BuildContext context) async
               openAppSettings();
             },
             icon: const Icon(Icons.arrow_forward, size: 18),
-            label: Text("Continuar".translate(context), style: heading3Grey1(context).copyWith(color: blackColor)),
+            label: Text("Continuar", style: heading3Grey1(context).copyWith(color: blackColor)),
             style: ElevatedButton.styleFrom(
               backgroundColor: themeColor,
               foregroundColor: Colors.white,
